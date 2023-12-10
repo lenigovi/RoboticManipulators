@@ -47,12 +47,13 @@ def plot_robot(robot_frames, ax):
 
 def main():
     joint_axes = [
-        (np.array([0, 0, 2]), np.array([0, 0, 10])),
-        (np.array([0.1, 1, 1]), np.array([-0.1, -1, 1])),
-        (np.array([0, -1, 0]), np.array([0, -2, 0])),
-        (np.array([1, 0, 0]), np.array([-1, 0, 0])),
-        (np.array([0, 0, 0]), np.array([0, 0, 0])),
-        (np.array([0, 0, 0]), np.array([0, 0, 0])),
+        (np.array([0, 0, 0]), np.array([0, 0, 3])),
+        (np.array([0, 0, 0]), np.array([0, -2, 0])),
+        (np.array([0, 0, 0]), np.array([5, 0, 2])),
+        (np.array([0, 0, 0]), np.array([0, 2, 0])),
+        (np.array([0, 0, 0]), np.array([5, 0, 2])),
+        (np.array([0, 0, 0]), np.array([1, 0, -1])),
+        (np.array([0, 0, 0]), np.array([1, 0, -1])),
     ]
 
     current_frame = np.eye(4)

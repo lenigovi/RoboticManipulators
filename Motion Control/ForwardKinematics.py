@@ -65,13 +65,16 @@ def main():
         current_frame = np.dot(current_frame, expm(screw_matrix_i))
         robot_frames.append(current_frame)
 
-    get_ipython().run_line_magic('matplotlib', 'notebook')
+    %matplotlib qt 
     fig = plt.figure()
-    ax = fig.add_subplot(111, projection='3d')
+    ax = fig.add_subplot((111), aspect='equal', projection='3d')
+    ax.scatter((1, 2), (1, 1), (1, 2)) 
+
+    ax.set_box_aspect([np.ptp(ax.get_xlim()), np.ptp(ax.get_ylim()), np.ptp(ax.get_zlim())])
 
     for i in range(len(robot_frames) - 1):
         plot_robot(robot_frames[:i + 1], ax)
-        plt.pause(0.0001)  # Adjust the pause time as needed
+        plt.pause(0.0001) 
         clear_output(wait=True)
 
     plt.show()

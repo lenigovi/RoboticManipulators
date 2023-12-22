@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Robot Gui</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <script src="UR30/require.js" charset="utf-8"></script>
+  <!-- <script src="/socket.io/socket.io.js"></script> -->
+
+  <script src="UR30/Three.js"></script>
+  <script src="UR30/Detector.js"></script>
+  <script src="UR30/Stats.js"></script>
+
+  <script src="UR30/THREEx.screenshot.js"></script>
+  <script src="UR30/THREEx.FullScreen.js"></script>
+  <script src="UR30/THREEx.WindowResize.js"></script>
+  <script src="UR30/OrbitControls.js"></script>
+  <script src="UR30/TransformControls.js"></script>
+  <script src="UR30/EventDispatcher.js"></script>
+  <script src="UR30/THREERobot.js"></script>
+
+  <link href="css.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- three.js container -->
+  <div id="container"></div>
+
+  <script type="text/javascript">
+
+    var debug = {}
+    requirejs.config({
+      // urlArgs: "bust=" + (new Date()).getTime(),
+      baseUrl: 'js',
+      paths: {
+        State: '../UR30/vendor/state/State',
+        Kinematic: 'InverseKinematic'
+      },
+    });
+
+    require(['Hmi'], function(Hmi) {
+      let hmi = new Hmi()
+    });
+  </script>
+</body>
+
+</html>

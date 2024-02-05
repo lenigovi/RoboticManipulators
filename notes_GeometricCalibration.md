@@ -9,7 +9,7 @@ We can compare different poses of the manipulator with measurements from more ac
 The first step is to build a model of the manipulator we are calibrating.
 Here is the algorithm:
 
-![Irreducible model creation](../images/irreducible_model_creation.png)
+![Irreducible model creation](/images/irreducible_model_creation.png)
 
 ### Least-squares parameters estimation
 

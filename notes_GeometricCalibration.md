@@ -15,12 +15,12 @@ Here is the algorithm:
 
 The second step is to find the initial guess for parameters (which can also be acceptable as a solution). Here we do this with least-squares approach:
 
-![Initial guess](../images/initial_guess.png)
+![Initial guess](/images/initial_guess.png)
 
 ### Gradient descent
 If the result on the previous step is not satisfying, we can use Gradient Descent to further minimize the cost function
 
-![Gradient Descent](../images/gradient_descent.png)
+![Gradient Descent](/images/gradient_descent.png)
 
 ## Results
 
